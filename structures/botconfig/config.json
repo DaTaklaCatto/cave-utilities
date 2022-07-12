@@ -1,0 +1,17 @@
+{   
+  "ownerID": ["832922325149810688"],
+  "SlashCommandsGlobal": true,
+  "SlashCommand_Server_id": "834372416381517864",
+  "Enable_KeepAlive": true,
+  "maintenance_mode": false,
+  "botlogs": {
+      "errorLogsChannel": "995983153204306021"
+  },
+  "bot_config": {
+    "bot_name": "UserName",
+    "client_Id": "123456789098765432"
+  },
+  "events": {
+    "Enable_debug": false
+  }
+}

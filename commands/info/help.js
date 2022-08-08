@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const prefix = process.env.PREFIX
 
 module.exports = {
@@ -21,39 +21,31 @@ module.exports = {
 
   async execute(client, message, args, config, embedcolor) {
     try {
-        const helpEmbed = new Discord.MessageEmbed()
-      .setTitle('Here is a list of commands you can use')
-      .setDescription('For a more detailed aproach click [here](https://utilities-pcbbd.pcbbd.repl.co/commands.html)')
+      const helpEmbed = new MessageEmbed()
+      .setTitle(`<:robot:1003197098948313169> Here are the commands you can use for ${client.user.username}`)
+      .setDescription(`The prefix for **${client.user.username}** is \`${prefix}\`. You can use commands as such:`)
       .addFields([
         {
-          name: `:ping_pong: Ping`,
-          value: `\`${prefix}ping\` - Gives you the websocket 
-ping and delay rate`,
-          inline: true
+          name : `<:info:1003197080929566840> About`,
+          value : `**Usage :** \`${prefix}about\`
+<:curvearrow:1003197046431416360>Gives you infomation about the bot and its owner.`,
+          inline : true
         },
         {
-          name: `:point_right: Boop`,
-          value: `\`${prefix}boop\` - Replies with beep`,
-          inline: true
+          name : `:grey_question: Ask`,
+          value : `**Usage :** \`${prefix}ask + <question>\`
+<:curvearrow:1003197046431416360>Replies with yes or no [RANDOM].`,
+          inline : true
         },
         {
-          name: `:question: Ask Question`,
-          value: `\`${prefix}ask + <question/text>\` - Replies with yes or no (random)`,
-          inline: true
-        },
-        {
-          name: `:frame_photo: avatar`,
-          value: `\`${prefix}avatar + <@user(optional)>\` - Replies with the avatar of an user and various formats to download`,
-          inline: true
-        },
-        {
-          name: `:robot: About the bot`,
-          value: `\`${prefix}about\` - Replies with information about the bot`,
-          inline: true
+          name : `:frame_photo: Avatar`,
+          value : `**Usage :** \`${prefix}avatar + <mention>\`
+<:curvearrow:1003197046431416360>Replies with one's avatar and download links.`,
+          inline : true
         }
       ])
 
-    return message.reply({ embeds: [helpEmbed] });
+      return message.reply({embeds : [helpEmbed]})
     } catch (e) {
       console.log(String(e.stack).bgRed)
     }

@@ -46,13 +46,9 @@ console.log(`${`Starting The Handlers`.brightGreen}`);
 });
 
 client.on("guildMemberAdd", async(member) => {
-    let welcomeRole1 = member.guild.roles.cache.find(role => role.name === 'Profileㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ')
-  let welcomeRole2 = member.guild.roles.cache.find(role => role.name === 'Awardsㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ')
-  let welcomeRole3 = member.guild.roles.cache.find(role => role.name === 'Notificationsㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ')
+    let welcomeRole1 = member.guild.roles.cache.find(role => role.name === 'Members')
 
   member.roles.add(welcomeRole1)
-  member.roles.add(welcomeRole2)
-  member.roles.add(welcomeRole3)
 })
 
 client.login(process.env.TOKEN);

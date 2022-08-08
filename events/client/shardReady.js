@@ -8,6 +8,6 @@ module.exports = {
    */
 
   async execute(client, id) {
-    client.logger(`Shard #${id} Ready`.brightGreen);
+    client.logger(`・Shard #${id} Ready`.brightGreen);
   }
 }

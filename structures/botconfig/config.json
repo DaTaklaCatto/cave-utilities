@@ -1,15 +1,15 @@
 {   
   "ownerID": ["832922325149810688"],
-  "SlashCommandsGlobal": true,
-  "SlashCommand_Server_id": "834372416381517864",
+  "SlashCommandsGlobal": false,
+  "SlashCommand_Server_id": "856191026058625044",
   "Enable_KeepAlive": true,
-  "maintenance_mode": false,
+  "maintenance_mode": true,
   "botlogs": {
-      "errorLogsChannel": "995983153204306021"
+      "errorLogsChannel": "996366477198368859"
   },
   "bot_config": {
-    "bot_name": "UserName",
-    "client_Id": "123456789098765432"
+    "bot_name": "Cave Utilities",
+    "client_Id": "950356411240566814"
   },
   "events": {
     "Enable_debug": false

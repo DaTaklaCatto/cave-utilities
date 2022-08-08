@@ -1,5 +1,5 @@
 const config = require('../botconfig/config.json');
-const Discord = require("discord.js");
+const { Collection} = require("discord.js");
 
 module.exports.onCoolDown = onCoolDown;
 module.exports.escapeRegex = escapeRegex;
@@ -10,7 +10,7 @@ function onCoolDown(message, command) {
   if (!command || !command.name) throw "No Command with a valid Name granted as Second Parameter";
   const client = message.client;
   if (!client.cooldowns.has(command.name)) {
-    client.cooldowns.set(command.name, new Discord.Collection());
+    client.cooldowns.set(command.name, new Collection());
   }
   const now = Date.now();
   const timestamps = client.cooldowns.get(command.name);

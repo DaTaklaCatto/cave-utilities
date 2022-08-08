@@ -1,8 +1,7 @@
 const Discord = require("discord.js");
 const Canvas = require("canvas")
 const config = require(`${process.cwd()}/structures/botconfig/config.json`);
-const { ch_welcome } = require(`${process.cwd()}/structures/botconfig/channels.json`);
-const background = "https://i.imgur.com/dqIkmCH.png"
+const background = "https://i.imgur.com/baFMgyc.png"
 const { registerFont, createCanvas } = require('canvas')
 
 registerFont('./structures/assets/fonts/drivecorps.ttf', { family: 'font' })
@@ -76,8 +75,8 @@ module.exports = {
 
 
     const img = await generateImage(member)
-if (member.guild.id === "781592241633493003") {
-      client.channels.cache.get("781592242371952706").send({      content: `Hey ${member}, welcome to **${member.guild.name}!** Make sure to read the <#781592242371952701>, get your <#781866203336409169>, and read the <#915180660262580235>. Hope you have a good time here!`,
+if (member.guild.id === "856191026058625044") {
+      client.channels.cache.get("950355725509607474").send({      content: `Welcome ${member}, to view shop go to the **MARKETPLACE** category. And for information go to <#950355835542974494> `,
       files: [img]})
          }
 		} catch (e) {

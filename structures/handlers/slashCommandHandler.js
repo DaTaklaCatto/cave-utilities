@@ -41,7 +41,7 @@ module.exports = async (client) => {
         if (!config.SlashCommand_Server_id) return client.logger(`You need to Provide the SlashCommand_Server_id in config.json to load slash commands!`.brightRed)
         // For Singular Server
         await client.guilds.cache.get(config.SlashCommand_Server_id).commands.set(slashCommandsArray);
-        
+
       }
 
     });

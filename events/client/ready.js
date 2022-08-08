@@ -12,9 +12,9 @@ module.exports = {
   async execute(client) {
     try {
       try {
-        client.logger(`Discord Bot is online!`.bold.brightGreen);
+        client.logger(`・Discord Bot is online!`.bold.brightGreen);
       } catch {
-        
+
       }
 
       if (config.maintenance_mode) {

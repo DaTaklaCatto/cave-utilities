@@ -24,7 +24,7 @@ module.exports = async (client) => {
       }
     });
     await client.logger(`・Events Loaded`.brightGreen);
-    await client.logger(`Logging into the BOT...`.bold.yellow)
+    await client.logger(`・Logging into the BOT`.bold.brightGreen)
 
   } catch (e) {
     console.log(String(e.stack).bgRed)
